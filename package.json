@@ -1,0 +1,35 @@
+{
+  "name": "nanotype",
+  "version": "0.0.0",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "bun test",
+    "bundle": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "tsup": {
+    "entry": ["index.ts"],
+    "sourcemap": true,
+    "minify": true,
+    "dts": true,
+    "outDir": "dist",
+    "clean": true,
+    "format": ["esm", "cjs"]
+  },
+  "type": "module",
+  "author": "Kubota Mitsunori(@anatoo) <anatoo.jp@gmail.com>",
+  "license": "MIT",
+  "description": "A tiny type validation library",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
