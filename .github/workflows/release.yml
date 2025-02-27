@@ -28,7 +28,7 @@ jobs:
         run: bun run test
       
       - name: Build
-        run: bun run bundle
+        run: bun run build
 
       - name: Run smoke tests
         run: bun run test:smoke

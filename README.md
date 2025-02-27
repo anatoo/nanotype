@@ -4,6 +4,7 @@ A tiny [zod](https://github.com/colinhacks/zod) alternative. TypeScript-first sc
 
 ## Development
 
-```bash
-bun test
-```
+Install 
+
+ - Test: `bun run test`
+ - Build: `bun run build`

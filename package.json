@@ -9,7 +9,7 @@
   "scripts": {
     "test": "bun test ./*.test.ts",
     "test:smoke": "bun test test/smoke",
-    "bundle": "tsup",
+    "build": "tsup",
     "typecheck": "tsc --noEmit"
   },
   "tsup": {
