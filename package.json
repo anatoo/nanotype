@@ -7,7 +7,8 @@
   },
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "bun test",
+    "test": "bun test ./*.test.ts",
+    "test:smoke": "bun test test/smoke",
     "bundle": "tsup",
     "typecheck": "tsc --noEmit"
   },

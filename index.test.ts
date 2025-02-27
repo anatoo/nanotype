@@ -67,3 +67,31 @@ describe('object()', () => {
     expect(memberSchema.is(member3)).toBe(true);
   });
 });
+
+describe('optional()', () => {
+  it('should works normally', () => {
+    expect(n.optional(n.string()).is('hoge')).toBe(true);
+    expect(n.optional(n.string()).is(undefined)).toBe(true);
+    expect(n.optional(n.string()).is(null)).toBe(true);
+    expect(n.optional(n.string()).is(1)).toBe(false);
+  });
+});
+
+
+describe('nullable()', () => {
+  it('should works normally', () => {
+    expect(n.nullable(n.string()).is('hoge')).toBe(true);
+    expect(n.nullable(n.string()).is(null)).toBe(true);
+    expect(n.nullable(n.string()).is(undefined)).toBe(false);
+  });
+});
+
+
+describe('union()', () => {
+  it('should works normally', () => {
+    expect(n.union(n.string(), n.number()).is('hoge')).toBe(true);
+    expect(n.union(n.string(), n.number()).is(1)).toBe(true);
+    expect(n.union(n.string(), n.number()).is(true)).toBe(false);
+  });
+});
+

@@ -1,5 +1,5 @@
 name: nanotype
 root: .
 windows:
-  test: bun test --watch
+  test: bun run test --watch
   fish: ""
