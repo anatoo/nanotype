@@ -41,12 +41,13 @@ if (ProfileSchema.is(john)) {
 
 ## Main differences from zod or valibot
 
+Nanotype just validates values and provides type safety.
+
 - No `parse` method.
 - No `pipe` method.
 - No `transform` method.
 - No error messages.
 
-Nanotype just validates values and provides type safety.
 
 ## API Reference
 
@@ -101,6 +102,7 @@ Prerequisites:
  - Bun v1.1.15+
 
 Commands:
+ - Install dependencies: `bun install`
  - Test: `bun run test`
  - Build: `bun run build`
  - Smoke test(run after build): `bun run test:smoke` 
